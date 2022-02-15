@@ -1,0 +1,17 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+.greetings-header {
+    display:flex;
+}
+.greetings {
+    margin-left: 2rem;
+}
+
+.schedule {
+    display: flex;
+}
