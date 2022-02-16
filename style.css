@@ -193,6 +193,10 @@ border-radius: .6rem;
     background-color: rgba(244,244,244,0.75);
 }
 
+.footer img {
+    margin: auto;
+}
+
 .nav img{
     display: flex;
     align-items: center;
