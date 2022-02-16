@@ -9,6 +9,7 @@
     width: 40%;
     margin: auto; 
     border: 1px solid grey;
+    position: relative;
 }
 
 .main-section {
@@ -190,18 +191,82 @@ border-radius: .6rem;
 }
 .animate    {
     animation-name: example;
-    animation-duration: 1s;
+    animation-duration: .3s;
     animation-timing-function: linear;
     animation-fill-mode: forwards
 }
+
+.animate-show    {
+    animation-name: close;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
 @keyframes example {
-    from {height: 100px;}
-    to {height:200px}
-    /* 0%   {height: 95px;} */
-    /* 25%  {height:50px}
-    50%  {height:100px}
-    75%  {height:150px} */
-    /* 100% {height: 200px;} */
+    from {height: 0vh;}
+    to {height:90vh}
+  }
+
+  @keyframes close {
+    from {height: 90vh}
+    to {height:0vh}
   }
 
 
+
+.show-meal {
+    height: 80vh;
+    width: 100%;
+    right: 0;
+    display: none;
+    border: 1px solid grey;
+    position: absolute;
+    background-color: wheat;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.today-meal {
+    padding: 2rem;
+}
+  .view-meal-header {
+    background-color: #F9F5E1;
+    display: flex;
+    border-top-left-radius: 1rem;
+    justify-content: space-between;
+    
+  }
+
+  .close-btn {
+      background-color: #FFBE56;
+      width: 30%;
+    border-top-right-radius: 1rem;
+
+  }
+
+  .food1 {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      margin-top: 2rem;
+  }
+.modal {
+    width: 100%;
+    /* height : 100vh; */
+    margin: 0px auto;
+    z-index: 100;
+    display: none;
+    position: absolute;
+    background-color: #000;
+    top:0;
+    bottom: 0;
+    right: 0px;
+}
+/* .modal-img {
+    height: 100px;
+    transition: height 2s;
+} */
+  .food1 div{
+      margin-left: 2rem;
+  }
+
+  /* .food2 {} */

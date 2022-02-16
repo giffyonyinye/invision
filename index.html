@@ -12,6 +12,9 @@
 <body>
     <section class="main">
         <div class="main-section">
+            <div class = 'modal'>
+                <h1> MODAL HERE</h1>
+            </div>
             <div>
                 <div class="greetings-header">
                     <img src="./assets/profile-pic.png" alt="profile-pic">
@@ -38,7 +41,7 @@
             </div>
 
             <div class="view-meals">
-                <div class="week-meal" onclick="showMeal()">
+                <div class="week-meal">
                     <p>View your meals for the week</p>
                 </div>
                 <!-- our meal -->
@@ -50,9 +53,71 @@
             </div>
             <!-- SHOW MEAL -->
             <div class="show-meal">
-                <p>yes this is it</p>
-            </div>
+                <div>
+                    <div class="view-meal-header">
+                        <div class="today-meal">
+                            <p>Today's Meal</p>
+                        </div>
+                        <button class="close-btn">
+                            <img src="./assets/close.png" alt="close">
+                        </button>
+                    </div>
 
+                    <div>
+                        <div class="food1">
+                            <img src="./assets/image1.png" alt="food" id = 1 class="foodz">
+                            <div>
+                                <p>Akara & Pap</p>
+                                <p>Carbohydrate</p>
+                            </div>
+                        </div>
+
+                        <div class="food1">
+                            <img src="./assets/image2.png" alt="food" id = 2 class = 'foodz'>
+                            <div>
+                                <p>Jollof Rice</p>
+                                <p>Protein</p> class = 'foodz'
+                            </div>
+                        </div>
+
+                        <div class="food1">
+                            <img src="./assets/image3.png" alt="food" id = 3 class = 'foodz'>
+                            <div>
+                                <p>Gastron</p>
+                                <p>Carbohydrate</p>
+                            </div>
+                        </div>
+
+                        <div class="food1">
+                            <img src="./assets/image4.png" alt="food" id = 4 class = 'foodz'>
+                            <div>
+                                <p>Gastron</p>
+                                <p>Carbohydrate</p>
+                            </div>
+                        </div>
+
+                        <div class="food1">
+                            <img src="./assets/image5.png" alt="food" id = 5 class = 'foodz'>
+                            <div>
+                                <p>Gastron</p>
+                                <p>Carbohydrate</p>
+                            </div>
+                        </div>
+
+                        <div class="food1">
+                            <img src="./assets/image5.png" alt="food" id = 6 class = 'foodz'>
+                            <div>
+                                <p>Gastron</p>
+                                <p>Carbohydrate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./" alt="">
+                </div>
+            </div>
             <div class="get-started">
                 <div class="get-started-content">
                     <h3>Getting Started</h3>
@@ -120,14 +185,49 @@
         </footer>
     </section>
     <script>
-        let selectedDiv = document.querySelector('.check-meal');
-        function styleDiv () {
-            selectedDiv.classList.add('animate');
-            // selectedDiv.style.transition = `height 2s`;
-            // selectedDiv.style.transitionTimingFunction = `linear`;
-            // selectedDiv.style.height = `300px`;
+        let add = ''
+        let img_url;
+        let foods = document.querySelectorAll('.foodz');
+        let modal = document.querySelector('.modal')
+        for(let i = 0; i<= foods.length-1; i++) {
+            foods[i].addEventListener('click', (e) => eventfunction(e));
         }
-        selectedDiv.addEventListener('click', styleDiv)
+        function eventfunction (e) {
+            add = e.target.id;
+            img_url = `./assets/image${add}.png`;
+            let child = document.createElement('img');
+            child.src = img_url;
+            child.style.width = `100%`;
+            child.style.height = `300px`;
+            modal.append(child);
+            modal.style.display = 'block';
+
+        }
+        console.log(foods);
+        let selectedDiv = document.querySelector('.check-meal');
+        let close = document.querySelector('.close-btn');
+        let viewmeals = document.querySelector('.view-meals');
+        let toggle = false;
+        let id = null;
+
+        function styleDiv () {
+            let showmeal = document.querySelector('.show-meal');
+            viewmeals.style.display = 'none';
+            showmeal.style.display = 'block'
+            showmeal.classList.add('animate');
+   
+        }
+        
+
+        function closeDiv () {
+        showmeal.classList.add('animate-show');
+        viewmeals.style.display = 'flex';
+            
+        }
+        close.addEventListener('click', closeDiv);
+        selectedDiv.addEventListener('click', styleDiv);
     </script>
 </body>
 </html>
+
+<!-- on cl -->
