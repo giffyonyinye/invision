@@ -6,40 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/style.css">
+    <script src="./index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <section>
-        <div>
-            <div class="greetings-header">
-                <img src="./assets/profile-pic.png" alt="profile-pic">
-                <p class="greetings">Good Morning Silm!</p>
+    <section class="main">
+        <div class="main-section">
+            <div>
+                <div class="greetings-header">
+                    <img src="./assets/profile-pic.png" alt="profile-pic">
+                    <p class="greetings">Good Morning Silm!</p>
+                </div>
+            </div>
+
+            <div class="schedule">
+                <h1>Schedule</h1>
+                <p class="reconfigure">Reconfigure Services</p>
+            </div>
+
+            <div class="inactive">
+                <div class="inactive-content">
+                    <p>Your account is inactive. <br>
+                        <strong>15% off</strong>
+                        offer until June 23.
+                    </p>
+                </div>
+                <div class="inactive-cost">
+                    <strike>N75,000</strike>
+                    <p>Pay N62,800</p>
+                </div>
+            </div>
+
+            <div class="view-meals">
+                <div class="week-meal" onclick="showMeal()">
+                    <p>View your meals for the week</p>
+                </div>
+                <!-- our meal -->
+                <div class="check-meal">
+                    <p>Check 'em</p>
+                </div>
+
+                
+            </div>
+            <!-- SHOW MEAL -->
+            <div class="show-meal">
+                <p>yes this is it</p>
+            </div>
+
+            <div class="get-started">
+                <div class="get-started-content">
+                    <h3>Getting Started</h3>
+                    <p>Let's answer any question you have left!</p>
+                </div>
+                <div class="get-started-menu">
+                    <div class="menu-1">
+                        <img class="phone-img" src="./assets/Group 8.png" alt="phone-icon">
+                        <p>Set up a call with your garderner</p>
+                        <div class="do-it">
+                            <a href="/">Do it</a>
+                            <img src="./assets/ios-arrow-round-forward.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menu-2">
+                        <img class="play-img" src="./assets/Group 9.png" alt="phone-icon">
+                        <p>Lose yourself to this video</p>
+                        <div class="play">
+                            <a href="/">Play</a>
+                            <img src="./assets/ios-arrow-round-forward (1).png" alt="play-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="tomorrow">
+                    <h2>Tomorrow</h2>
+                    <div class="time">
+                        <p class="timer">9 - 10am</p>
+                        <div class="content">
+                            <p>Your cleaner is coming in to give your apartment the looks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tomorrow">
+                    <h2>Friday, July  2017</h2>
+                    <div class="time">
+                        <p class="timer">3 - 5pm</p>
+                        <div class="content">
+                            <p>Your cleaner is coming in to give your apartment the looks.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="schedule">
-            <h1>Schedule</h1>
-            <p>Reconfigure Services</p>
-        </div>
-
-        <div>
-            <div>
-                <p>Your account is inactive. <strong>15% off</strong> offer untilJune 23</p>
+        <footer class="footer">
+            <div class="nav">
+                <img src="./assets/calendar-range.png" alt="calendar-icon">
+                <p>Schedule</p>
             </div>
-            <div>
-                <strike>N75,000</strike>
-                <p>Pay N62,800</p>
+            <div class="nav">
+                <img src="./assets/history.png" alt="history-icon">
+                <p>History</p>
             </div>
-        </div>
-
-        <div>
-            <div>
-                <p>View your meals for the week</p>
+            <div class="nav">
+                <img src="./assets/md-notifications-outline.png" alt="notification-icon">
+                <p>Notification</p>
             </div>
-            <div>
-                <p>Check 'em</p>
+            <div class="nav">
+                <img src="./assets/message-text-outline.png" alt="chat-icon">
+                <p>Chat</p>
             </div>
-        </div>
+        </footer>
     </section>
+    <script>
+        let selectedDiv = document.querySelector('.check-meal');
+        function styleDiv () {
+            selectedDiv.classList.add('animate');
+            // selectedDiv.style.transition = `height 2s`;
+            // selectedDiv.style.transitionTimingFunction = `linear`;
+            // selectedDiv.style.height = `300px`;
+        }
+        selectedDiv.addEventListener('click', styleDiv)
+    </script>
 </body>
 </html>
