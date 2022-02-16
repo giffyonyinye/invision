@@ -10,6 +10,14 @@
     margin: auto; 
     border: 1px solid grey;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 676px) {
+    .main{
+        width: 100%;
+    }
 }
 
 .main-section {
@@ -25,7 +33,7 @@
 .schedule {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .reconfigure {
@@ -64,7 +72,7 @@
     display: flex;
     background-color:  #F9F5E1;
     border-radius: .6rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .week-meal {
@@ -85,7 +93,7 @@
 }
 
 .get-started {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     background-color: #CFECFF;
     border-radius: .7rem;
 }
@@ -170,6 +178,9 @@ border-radius: .6rem;
 }
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
